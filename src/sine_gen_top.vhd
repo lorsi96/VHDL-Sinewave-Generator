@@ -3,13 +3,13 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 
-entity sine_gen_top is
+entity sinewave_gen_top is
     port(
         clk: in std_logic
     );
 end;
 
-architecture sine_gen_top_arch of sine_gen_top is
+architecture sinewave_gen_top_arch of sinewave_gen_top is
 
     COMPONENT vio_0
       PORT (

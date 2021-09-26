@@ -30,7 +30,7 @@ architecture sine_generator_tb_arch of sine_generator_tb is
     end component;
 
     
-    component sine_gen_top is
+    component sinewave_gen_top is
         port(clk: in std_logic);
     end component;
 
@@ -53,7 +53,7 @@ begin
       result => result_tb
     );
 
-    SIN_TOP : sine_gen_top
+    SIN_TOP : sinewave_gen_top
     port map (
         clk => clk_tb
     );
