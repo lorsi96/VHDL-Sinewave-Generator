@@ -14,7 +14,7 @@ architecture sinewave_gen_top_arch of sinewave_gen_top is
     COMPONENT vio_0
       PORT (
         clk : IN STD_LOGIC;
-        probe_in0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe_in0 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
         probe_out0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
         probe_out1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
       );
@@ -29,16 +29,16 @@ architecture sinewave_gen_top_arch of sinewave_gen_top is
         );
     end component;
 
-    component sinewave_generator is
+    component sine_generator is
         generic(
-            BASE_SIN_FREQ_HZ: natural := 100;
+            BASE_SIN_FREQ_HZ: natural := 50000;
             CLOCK_RATE: natural := 50e6 
         );
         port(
             clk: in std_logic;
             up: in std_logic;
             down: in std_logic;
-            result: out std_logic
+            result: out std_logic_vector(7 downto 0)
         );
     end component;
 
@@ -46,14 +46,14 @@ architecture sinewave_gen_top_arch of sinewave_gen_top is
     signal dwn_btn_async: std_logic_vector(0 downto 0) := "0";
     signal up_btn: std_logic := '0';
     signal dwn_btn: std_logic := '0';
-    signal analog_sine: std_logic_vector(0 downto 0) := "0";
+    signal digital_sine: std_logic_vector(7 downto 0) := (others => '0');
 
 begin
 
    SINE_VIO : vio_0
    PORT MAP (
      clk => clk,
-     probe_in0 => analog_sine,
+     probe_in0 => digital_sine,
      probe_out0 => up_btn_async,
      probe_out1 => dwn_btn_async
    );
@@ -74,12 +74,12 @@ begin
         signal_dst => dwn_btn
     );
 
-    SINE_GEN: sinewave_generator
+    SINE_GEN: sine_generator
     port map (
         clk => clk,
         up => up_btn,
         down => dwn_btn,
-        result => analog_sine(0)
+        result => digital_sine
     );
 
 end;

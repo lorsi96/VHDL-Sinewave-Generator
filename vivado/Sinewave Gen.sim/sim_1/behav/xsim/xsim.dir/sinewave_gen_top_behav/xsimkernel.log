@@ -1,0 +1,4 @@
+Running: xsim.dir/sinewave_gen_top_behav/xsimk -simmode gui -wdb sinewave_gen_top_behav.wdb -simrunnum 0 -socket 46445
+Design successfully loaded
+Design Loading Memory Usage: 32684 KB (Peak: 32736 KB)
+Design Loading CPU Usage: 10 ms

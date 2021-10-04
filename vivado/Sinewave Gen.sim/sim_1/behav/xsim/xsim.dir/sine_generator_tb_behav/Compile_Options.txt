@@ -1,0 +1,1 @@
+-wto "fe1ef5680e5c4971b5c78d6724406d3a" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "sine_generator_tb_behav" "xil_defaultlib.sine_generator_tb" -log "elaborate.log" 

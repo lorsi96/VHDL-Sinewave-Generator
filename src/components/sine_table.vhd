@@ -2,16 +2,16 @@ library ieee;
 use ieee.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity sine_generator is
+entity sine_table is
     generic(constant SIN_GEN_MUL_N_BITS: natural := 4);
     port(
       clk: in std_logic;
       mul: in unsigned(SIN_GEN_MUL_N_BITS - 1 downto 0);
-      result: out unsigned(7 downto 0) := (others => '0')
+      result: out std_logic_vector(7 downto 0) := (others => '0')
     );
-end sine_generator;
+end sine_table;
 
-architecture sine_generator_arch of sine_generator is
+architecture sine_table_arch of sine_table is
 begin
     process(clk) is
         constant SIN_GEN_OUT_N_BITS: natural := 8;
@@ -282,4 +282,4 @@ begin
             end case;    
         end if;
     end process;
-end sine_generator_arch;   
+end sine_table_arch;   

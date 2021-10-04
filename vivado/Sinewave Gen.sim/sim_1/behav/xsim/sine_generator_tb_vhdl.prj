@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../src/components/buttons.vhd" \
+"../../../../../src/components/sin_clk_gen.vhd" \
+"../../../../../src/components/sine_generator.vhd" \
+"../../../../../src/components/sine_table.vhd" \
+"../../../../../src/testbenchs/sine_generator_tb.vhd" \
+
+# Do not sort compile order
+nosort

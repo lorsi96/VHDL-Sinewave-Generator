@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Sinewave Gen.srcs/sources_1/ip/vio_0/sim/vio_0.vhd" \
+"../../../../../src/components/buttons.vhd" \
+"../../../../../src/third_party/meta_harden.vhd" \
+"../../../../../src/components/sin_clk_gen.vhd" \
+"../../../../../src/components/sine_generator.vhd" \
+"../../../../../src/components/sine_table.vhd" \
+"../../../../../src/sine_gen_top.vhd" \
+
+# Do not sort compile order
+nosort

@@ -3,7 +3,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 
-entity sinewave_generator is
+entity sine_generator is
     -- Generic Configuration --
     generic(
         -- Output Sine Base (min) Frequency --
@@ -21,11 +21,11 @@ entity sinewave_generator is
         down: in std_logic;
 
         -- 8 bit sinewave output --
-        result: out std_logic
+        result: out std_logic_vector(7 downto 0)
     );
 end;
 
-architecture sinewave_generator_arch of sinewave_generator  is
+architecture sine_generator_arch of sine_generator  is
     
     component buttons is
         generic(BTN_CNT_MAX_BITS: natural := 4);
@@ -36,21 +36,11 @@ architecture sinewave_generator_arch of sinewave_generator  is
         );
     end component;
 
-    component pwm is
-      generic(PWM_N_BITS: natural := 8);
-      port(
-          pwm_clk: in std_logic;
-          pwm_cmp: in unsigned(PWM_N_BITS-1 downto 0);
-          pwm_out: out std_logic;
-          pwm_end: out std_logic
-      );
-    end component;
-
-    component sine_generator is
+    component sine_table is
         port(
           clk: in std_logic;
           mul: in unsigned(3 downto 0);
-          result: out unsigned(7 downto 0)
+          result: out std_logic_vector(7 downto 0)
         );
     end component;
 
@@ -58,7 +48,6 @@ architecture sinewave_generator_arch of sinewave_generator  is
       generic(
         SIN_SAMPLES_N: natural := 256;
         BASE_SIN_FREQ_HZ: natural := BASE_SIN_FREQ_HZ;
-        SIN_LEVELS: natural := 256;
         CLOCK_RATE: natural := CLOCK_RATE
       );
       port(
@@ -70,7 +59,6 @@ architecture sinewave_generator_arch of sinewave_generator  is
 
     signal downsampled_clk: std_logic := '0';
     signal sine_table_next: std_logic := '0';
-    signal sine_output: unsigned(7 downto 0) := "00000000";
     signal mul: unsigned(3 downto 0) := (others => '0');
 
 begin
@@ -89,19 +77,12 @@ begin
         clk_out => downsampled_clk
     );
 
-    SINE_PWM: pwm
-    port map(
-      pwm_clk => downsampled_clk,
-      pwm_end => sine_table_next,
-      pwm_out => result,
-      pwm_cmp => sine_output
-    );
 
-    SIN_GEN: sine_generator
+    SIN_GEN: sine_table
     port map(
-      clk => sine_table_next,
+      clk => downsampled_clk,
       mul => mul,
-      result => sine_output
+      result => result
     );
 
 

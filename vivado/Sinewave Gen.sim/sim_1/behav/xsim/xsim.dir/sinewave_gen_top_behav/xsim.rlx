@@ -1,0 +1,12 @@
+
+{ 
+    crc :  6429735107477354454  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto fe1ef5680e5c4971b5c78d6724406d3a --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip -L xpm --snapshot sinewave_gen_top_behav xil_defaultlib.sinewave_gen_top" , 
+    buildDate : "Apr  4 2018" , 
+    buildTime : "18:43:17" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/sinewave_gen_top_behav/xsimk\"   \"xsim.dir/sinewave_gen_top_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/sinewave_gen_top_behav/obj/xsim_1.lnx64.o\" \"/opt/Xilinx/Vivado/2018.1/lib/lnx64.o/librdi_simulator_kernel.so\"  \"/opt/Xilinx/Vivado/2018.1/lib/lnx64.o/librdi_simbridge_kernel.so\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

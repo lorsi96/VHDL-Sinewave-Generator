@@ -1,0 +1,4 @@
+Running: xsim.dir/sine_generator_tb_behav/xsimk -simmode gui -wdb sine_generator_tb_behav.wdb -simrunnum 0 -socket 51571
+Design successfully loaded
+Design Loading Memory Usage: 32680 KB (Peak: 32732 KB)
+Design Loading CPU Usage: 10 ms
