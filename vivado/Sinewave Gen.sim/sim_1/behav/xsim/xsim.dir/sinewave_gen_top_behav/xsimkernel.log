@@ -2,3 +2,6 @@ Running: xsim.dir/sinewave_gen_top_behav/xsimk -simmode gui -wdb sinewave_gen_to
 Design successfully loaded
 Design Loading Memory Usage: 32684 KB (Peak: 32736 KB)
 Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 122620 KB (Peak: 179956 KB)
+Simulation CPU Usage: 20 ms

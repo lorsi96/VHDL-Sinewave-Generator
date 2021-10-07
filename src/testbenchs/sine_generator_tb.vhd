@@ -25,7 +25,11 @@ architecture sine_generator_tb_arch of sine_generator_tb is
           down: in std_logic;
 
           -- 8 bit sinewave output --
-          result: out std_logic_vector(7 downto 0)
+          result: out std_logic_vector(7 downto 0);
+
+          -- DBG Signals --
+          dsclk: out std_logic;
+          dbg_table_cnt: out std_logic_vector(7 downto 0)
       );
     end component;
 
@@ -40,6 +44,10 @@ architecture sine_generator_tb_arch of sine_generator_tb is
     -- signal clk_out_bt: std_logic;
     signal result_tb: std_logic_vector(7 downto 0);
 
+    -- DBG Signals --
+    signal dsclk_tb: std_logic;
+    signal dbg_table_cnt_tb: std_logic_vector(7 downto 0);
+
 begin
 
     SINEWAVE_GEN : sine_generator 
@@ -47,7 +55,9 @@ begin
       clk => clk_tb,
       up => up_tb,
       down => dwn_tb,
-      result => result_tb
+      result => result_tb,
+      dsclk => dsclk_tb,
+      dbg_table_cnt => dbg_table_cnt_tb
     );
     
     --- Test Procedure ---
@@ -61,5 +71,6 @@ begin
         up_tb <= '1';
         wait for 10 ns;
         up_tb <= '0';
+        wait;
     end process;
 end;

@@ -21,7 +21,11 @@ entity sine_generator is
         down: in std_logic;
 
         -- 8 bit sinewave output --
-        result: out std_logic_vector(7 downto 0)
+        result: out std_logic_vector(7 downto 0);
+        
+        -- Debug Signals --
+        dsclk: out std_logic;
+        dbg_table_cnt: out std_logic_vector(7 downto 0)
     );
 end;
 
@@ -40,7 +44,8 @@ architecture sine_generator_arch of sine_generator  is
         port(
           clk: in std_logic;
           mul: in unsigned(3 downto 0);
-          result: out std_logic_vector(7 downto 0)
+          result: out std_logic_vector(7 downto 0);
+          dbg_table_cnt: out std_logic_vector(7 downto 0)
         );
     end component;
 
@@ -82,8 +87,10 @@ begin
     port map(
       clk => downsampled_clk,
       mul => mul,
-      result => result
+      result => result,
+      dbg_table_cnt => dbg_table_cnt
     );
-
+    
+    dsclk <= downsampled_clk;
 
 end;

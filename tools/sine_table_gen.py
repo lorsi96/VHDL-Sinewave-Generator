@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # ******************************************************************************************************************** #
 BASE_CLOCK_HZ = 50e6
 SINE_FREQUENCY_HZ = 100
-SINE_N_SAMPLES = 2**6
+SINE_N_SAMPLES = 2**8
 SINE_N_LEVELS = 2**8
 
 # ******************************************************************************************************************** #
@@ -21,7 +21,7 @@ LUT_TEMPLATE = '''begin
 end process;'''
 
 def lut_entry_gen(address, value, add_bits=8, val_bits=8):
-  return ('        when "{0:0' + str(add_bits) +'b}" => result <= "{1:0' + str(val_bits) +'b}";').format(address, value)
+  return ('        when "{0:0' + str(add_bits) +'b}" => result <= "{1:0' + str(val_bits) +'b}";').format(address, value) + f' -- {hex(value)}'
 
 def tab_gen(arr):
   add_bits = int(np.ceil(np.log2(len(arr))))

@@ -7,7 +7,7 @@ entity buttons is
     port(
         btn_up: in std_logic;
         btn_down: in std_logic;
-        btn_cnt_out: out unsigned(BTN_CNT_MAX_BITS-1 downto 0)
+        btn_cnt_out: out unsigned(BTN_CNT_MAX_BITS-1 downto 0) := (others => '0')
     );
 end;
 

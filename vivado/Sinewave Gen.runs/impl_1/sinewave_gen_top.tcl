@@ -62,14 +62,13 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-79185-lorsi-ThinkPad-T490/incrSyn
+  set_param xicom.use_bs_reader 1
+  set_param tcl.collectionResultDisplayLimit 0
   create_project -in_memory -part xc7z010clg400-1
   set_property board_part digilentinc.com:arty-z7-10:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -78,8 +77,10 @@ set rc [catch {
   set_property parent.project_path {/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.xpr} [current_project]
   set_property ip_output_repo {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/synth_1/sinewave_gen_top.dcp}}
   read_ip -quiet {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/vio_0/vio_0.xci}}
+  read_ip -quiet {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/ila_sine/ila_sine.xci}}
   read_xdc /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/contraints/Arty-Z7-10-Master.xdc
   link_design -top sinewave_gen_top -part xc7z010clg400-1
   close_msg_db -file init_design.pb
@@ -160,6 +161,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force sinewave_gen_top.mmi }
   write_bitstream -force sinewave_gen_top.bit 
   catch {write_debug_probes -quiet -force sinewave_gen_top}

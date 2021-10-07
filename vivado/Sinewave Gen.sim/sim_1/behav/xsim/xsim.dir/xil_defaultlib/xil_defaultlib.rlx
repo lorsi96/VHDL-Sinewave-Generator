@@ -2,11 +2,12 @@
 2018.1
 Apr  4 2018
 18:43:17
-/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/buttons.vhd,1633300595,vhdl,,,,buttons,,,,,,,,
+/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/buttons.vhd,1633565694,vhdl,,,,buttons,,,,,,,,
 /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sin_clk_gen.vhd,1633299441,vhdl,,,,clk_gen,,,,,,,,
-/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_generator.vhd,1633305140,vhdl,,,,sine_generator,,,,,,,,
-/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_table.vhd,1633305149,vhdl,,,,sine_table,,,,,,,,
+/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_generator.vhd,1633574615,vhdl,,,,sine_generator,,,,,,,,
+/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_table.vhd,1633565690,vhdl,,,,sine_table,,,,,,,,
 /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd,1633306763,vhdl,,,,sinewave_gen_top,,,,,,,,
-/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/testbenchs/sine_generator_tb.vhd,1633306219,vhdl,,,,sine_generator_tb,,,,,,,,
+/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/testbenchs/sine_generator_tb.vhd,1633575571,vhdl,,,,sine_generator_tb,,,,,,,,
 /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/third_party/meta_harden.vhd,1632672549,vhdl,,,,meta_harden,,,,,,,,
+/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.sim/sim_1/behav/xsim/glbl.v,1522801934,verilog,,,,glbl,,,,,,,,
 /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/vio_0/sim/vio_0.vhd,1633306571,vhdl,,,,vio_0,,,,,,,,

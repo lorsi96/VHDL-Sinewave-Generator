@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="ila_sine_synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1633608648">
+  <File Type="VDS-TIMING-PB" Name="ila_sine_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ila_sine_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="ila_sine.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="ila_sine_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="ila_sine_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="ila_sine_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="ila_sine.vds"/>
+  <File Type="REPORTS-TCL" Name="ila_sine_reports.tcl"/>
+  <File Type="PA-TCL" Name="ila_sine.tcl"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_sine">
+    <File Path="$PSRCDIR/sources_1/ip/ila_sine/ila_sine.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="ila_sine"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_sine">
+    <File Path="$PSRCDIR/sources_1/ip/ila_sine/ila_sine.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="ila_sine"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
