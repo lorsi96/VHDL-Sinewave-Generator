@@ -16,7 +16,7 @@ entity clk_gen is
 	port(
 		clk: 			in std_logic;
 		rst: 			in std_logic;       
-		clk_out:		out std_logic
+		clk_out:		out std_logic := '0'
 	);
 end;
 
