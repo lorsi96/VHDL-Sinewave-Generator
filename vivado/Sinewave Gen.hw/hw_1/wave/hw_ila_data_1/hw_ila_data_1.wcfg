@@ -9,36 +9,29 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="394178fs"></ZoomStartTime>
-      <ZoomEndTime time="412339fs"></ZoomEndTime>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1024001fs"></ZoomEndTime>
       <Cursor1Time time="458000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="114"></ValueColumnWidth>
+      <ValueColumnWidth column_width="110"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="3" />
+   <WVObjectSize size="2" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="array" fp_name="digital_sine_1">
+   <wvobject type="array" fp_name="cnt_out_addr_in">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">digital_sine_1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">digital_sine_1[7:0]</obj_property>
+      <obj_property name="ElementShortName">cnt_out_addr_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt_out_addr_in[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="dsclk_probe">
+   <wvobject type="array" fp_name="data_out_probe_in">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dsclk_probe</obj_property>
-      <obj_property name="ObjectShortName">dsclk_probe</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="dbg_table_cnt">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dbg_table_cnt[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dbg_table_cnt[7:0]</obj_property>
+      <obj_property name="ElementShortName">data_out_probe_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_probe_in[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

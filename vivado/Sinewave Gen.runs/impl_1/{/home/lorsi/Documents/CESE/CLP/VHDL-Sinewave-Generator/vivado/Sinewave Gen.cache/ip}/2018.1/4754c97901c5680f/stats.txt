@@ -1,3 +1,0 @@
-NumberHits:1
-Timestamp: Thu Oct 07 12:31:27 UTC 2021
-VLNV: xilinx.com:ip:xsdbm:3.0

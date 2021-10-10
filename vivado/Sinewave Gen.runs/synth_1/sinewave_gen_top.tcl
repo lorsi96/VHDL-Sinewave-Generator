@@ -16,10 +16,11 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
-set_param tcl.collectionResultDisplayLimit 0
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-660064-lorsi-ThinkPad-T490/incrSyn
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -35,21 +36,20 @@ set_property board_part digilentinc.com:arty-z7-10:part0:1.0 [current_project]
 set_property ip_output_repo {/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/buttons.vhd
-  /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sin_clk_gen.vhd
-  /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_generator.vhd
-  /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_table.vhd
+  {/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/imports/components/button_counter.vhd}
+  /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/generic_counter.vhd
+  /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_lut.vhd
   /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd
 }
-read_ip -quiet {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/vio_0/vio_0.xci}}
-set_property used_in_implementation false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/vio_0/vio_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/vio_0/vio_0_ooc.xdc}}]
+read_ip -quiet {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/buttons_vio/buttons_vio.xci}}
+set_property used_in_implementation false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/buttons_vio/buttons_vio.xdc}}]
+set_property used_in_implementation false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/buttons_vio/buttons_vio_ooc.xdc}}]
 
-read_ip -quiet {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/ila_sine/ila_sine.xci}}
-set_property used_in_synthesis false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/ila_sine/ila_v6_2/constraints/ila_impl.xdc}}]
-set_property used_in_implementation false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/ila_sine/ila_v6_2/constraints/ila_impl.xdc}}]
-set_property used_in_implementation false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/ila_sine/ila_v6_2/constraints/ila.xdc}}]
-set_property used_in_implementation false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/ila_sine/ila_sine_ooc.xdc}}]
+read_ip -quiet {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/ila_0/ila_0.xci}}
+set_property used_in_synthesis false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc}}]
+set_property used_in_implementation false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc}}]
+set_property used_in_implementation false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc}}]
+set_property used_in_implementation false [get_files -all {{/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

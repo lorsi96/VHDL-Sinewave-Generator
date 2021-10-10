@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1633609765">
-  <File Type="PA-TCL" Name="sinewave_gen_top.tcl"/>
-  <File Type="REPORTS-TCL" Name="sinewave_gen_top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="sinewave_gen_top.vds"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1633900470">
+  <File Type="VDS-TIMING-PB" Name="sinewave_gen_top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="sinewave_gen_top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="sinewave_gen_top.dcp"/>
   <File Type="RDS-UTIL-PB" Name="sinewave_gen_top_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="sinewave_gen_top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="sinewave_gen_top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="sinewave_gen_top.vds"/>
+  <File Type="REPORTS-TCL" Name="sinewave_gen_top_reports.tcl"/>
+  <File Type="PA-TCL" Name="sinewave_gen_top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../src/components/buttons.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/components/button_counter.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/components/button_counter.vhd"/>
+        <Attr Name="ImportTime" Val="1633898097"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/components/generic_counter.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../src/components/sin_clk_gen.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../src/components/sine_generator.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../src/components/sine_table.vhd">
+    <File Path="$PPRDIR/../src/components/sine_lut.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -38,21 +37,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../src/third_party/meta_harden.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../src/testbenchs/buttons_tb.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../src/testbenchs/sine_generator_tb.vhd">
+    <File Path="$PPRDIR/../src/components/sin_clk_gen.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -62,7 +47,6 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="sinewave_gen_top"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -81,6 +65,6 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="vio_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ila_sine"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="buttons_vio"/>
 </GenRun>
