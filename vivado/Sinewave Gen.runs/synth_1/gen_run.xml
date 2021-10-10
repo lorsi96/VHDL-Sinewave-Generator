@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1633609765">
-  <File Type="VDS-TIMING-PB" Name="sinewave_gen_top_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="sinewave_gen_top_timing_summary_synth.rpt"/>
+  <File Type="PA-TCL" Name="sinewave_gen_top.tcl"/>
+  <File Type="REPORTS-TCL" Name="sinewave_gen_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="sinewave_gen_top.vds"/>
   <File Type="RDS-DCP" Name="sinewave_gen_top.dcp"/>
   <File Type="RDS-UTIL-PB" Name="sinewave_gen_top_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="sinewave_gen_top_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="sinewave_gen_top_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="sinewave_gen_top.vds"/>
-  <File Type="REPORTS-TCL" Name="sinewave_gen_top_reports.tcl"/>
-  <File Type="PA-TCL" Name="sinewave_gen_top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../src/components/buttons.vhd">
@@ -84,6 +81,6 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="ila_sine"/>
   <BlockFileSet Type="BlockSrcs" Name="vio_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_sine"/>
 </GenRun>

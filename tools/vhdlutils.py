@@ -26,6 +26,7 @@ def get_command(dut, inc_sim=True, stop_time=STOP_TIME):
     if inc_sim:
         cmds.append(f'gtkwave {dut}_tb.vcd') 
 
+    print(cmds)
     return ' && '.join(cmds)
 
 

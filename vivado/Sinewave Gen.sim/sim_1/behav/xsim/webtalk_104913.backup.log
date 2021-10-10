@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Webtalk v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Oct  6 23:51:47 2021
+# Process ID: 104913
+# Current directory: /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.sim/sim_1/behav/xsim/xsim.dir/sine_generator_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave -notrace
+source Gen.sim/sim_1/behav/xsim/xsim.dir/sine_generator_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+couldn't read file "Gen.sim/sim_1/behav/xsim/xsim.dir/sine_generator_tb_behav/webtalk/xsim_webtalk.tcl": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Wed Oct  6 23:51:47 2021...

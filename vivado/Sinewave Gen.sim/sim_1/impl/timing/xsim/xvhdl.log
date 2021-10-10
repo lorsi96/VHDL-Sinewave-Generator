@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/generic_counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity generic_counter
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/testbenchs/generic_counter_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity generic_counter_tb
