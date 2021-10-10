@@ -17,6 +17,8 @@ proc create_report { reportName command } {
   }
 }
 set_param synth.incrementalSynthesisCache ./.Xil/Vivado-660064-lorsi-ThinkPad-T490/incrSyn
+set_param xicom.use_bs_reader 1
+set_param tcl.collectionResultDisplayLimit 0
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {Synth 8-256} -limit 10000

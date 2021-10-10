@@ -8,11 +8,11 @@ use IEEE.numeric_std.all;
         COUNT_OFFSET_WIDTH:  natural := 3 
      );
      port (
-         cout   :out std_logic_vector (OUTPUT_WIDTH - 1 downto 0); 
-         enable :in  std_logic;                     
          clk    :in  std_logic;                     
+         enable :in  std_logic;                     
          offset :in  std_logic_vector(COUNT_OFFSET_WIDTH - 1 downto 0);
-         reset  :in  std_logic                      
+         reset  :in  std_logic;                      
+         cout   :out std_logic_vector (OUTPUT_WIDTH - 1 downto 0)
      );
  end entity;
  

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1633900470">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1633903377">
   <File Type="VDS-TIMING-PB" Name="sinewave_gen_top_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="sinewave_gen_top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="sinewave_gen_top.dcp"/>
@@ -37,9 +37,11 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../src/components/sin_clk_gen.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/components/clk_gen.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../src/components/clk_gen.vhd"/>
+        <Attr Name="ImportTime" Val="1633901442"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>

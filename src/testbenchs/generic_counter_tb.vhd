@@ -9,47 +9,45 @@ end;
 architecture generic_counter_tb_arch of generic_counter_tb is
 
     component generic_counter is
-       generic (
-           N: natural := 8;
-           S: natural := 1  
-       );
-       port(
-           clk_in: in std_logic;
-           rst_in: in std_logic;
-           step_in: in unsigned(S-1 downto 0);
-   
-           data_out: out unsigned(N-1 downto 0);
-           rst_out: out std_logic
-       );
+        generic(
+            OUTPUT_WIDTH:        natural := 8;
+            COUNT_OFFSET_WIDTH:  natural := 3 
+        );
+        port (
+            cout   :out std_logic_vector (OUTPUT_WIDTH - 1 downto 0); 
+            enable :in  std_logic;                     
+            clk    :in  std_logic;                     
+            offset :in  std_logic_vector(COUNT_OFFSET_WIDTH - 1 downto 0);
+            reset  :in  std_logic                      
+        );
     end component generic_counter;
 
 
    signal clk_in_tb: std_logic := '0';
-   signal rst_in_tb: std_logic := '0';
-   signal step_in_tb: unsigned(0 downto 0) := (others => '0');
+   signal step_in_tb: std_logic_vector(2 downto 0) := (others => '0');
 
-   signal data_out_tb: unsigned(7 downto 0);
+   signal data_out_tb: std_logic_vector(7 downto 0);
    signal rst_out_tb: std_logic;
-   signal hello: std_logic_vector(7 downto 0);
-
-
 
 begin
 
     clk_in_tb <= not clk_in_tb after 10 ns;
-    hello <= std_logic_vector(data_out_tb);
 
     DUT: generic_counter
     port map(
-        clk_in => clk_in_tb,
-        rst_in => rst_in_tb,
-        step_in => step_in_tb,
-        data_out => data_out_tb,
-        rst_out => rst_out_tb
+        clk => clk_in_tb,
+        enable => '1',
+        offset => step_in_tb,
+        reset => '0',
+        cout => data_out_tb
     );
 
     TEST: process
     begin
-        wait for 100 ns;
+        wait for 40 ns;
+        step_in_tb <= "011";
+        wait for 40 ns;
+        step_in_tb <= "010";
+        wait;
     end process;
 end;

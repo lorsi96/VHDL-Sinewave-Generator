@@ -12,14 +12,14 @@ architecture sine_lut_tb_arch of sine_lut_tb is
 
     component sine_lut is
         port(
-            address_in: in unsigned(ADDR_BITS - 1 downto 0);
-            data_out: out unsigned(OUTPUT_BITS - 1 downto 0)
+            address_in: in std_logic_vector(ADDR_BITS - 1 downto 0);
+            data_out: out std_logic_vector(OUTPUT_BITS - 1 downto 0)
         );
     end component sine_lut;
 
 
-   signal address_in_tb: unsigned(ADDR_BITS - 1 downto 0);
-   signal data_out_tb: unsigned(ADDR_BITS - 1 downto 0);
+   signal address_in_tb: std_logic_vector(ADDR_BITS - 1 downto 0);
+   signal data_out_tb: std_logic_vector(ADDR_BITS - 1 downto 0);
 
 
 begin

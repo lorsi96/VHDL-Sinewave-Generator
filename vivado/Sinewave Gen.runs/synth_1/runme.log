@@ -14,36 +14,36 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 662102 
+INFO: Helper process launched with PID 749024 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1306.652 ; gain = 81.000 ; free physical = 14887 ; free virtual = 21556
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1306.652 ; gain = 81.000 ; free physical = 12356 ; free virtual = 19350
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'sinewave_gen_top' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:12]
-INFO: [Synth 8-3491] module 'ila_0' declared at '/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/synth_1/.Xil/Vivado-662086-lorsi-ThinkPad-T490/realtime/ila_0_stub.vhdl:5' bound to instance 'sine_ila' of component 'ila_0' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:68]
-INFO: [Synth 8-638] synthesizing module 'ila_0' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/synth_1/.Xil/Vivado-662086-lorsi-ThinkPad-T490/realtime/ila_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'buttons_vio' declared at '/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/synth_1/.Xil/Vivado-662086-lorsi-ThinkPad-T490/realtime/buttons_vio_stub.vhdl:5' bound to instance 'vio_buttons' of component 'buttons_vio' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:75]
-INFO: [Synth 8-638] synthesizing module 'buttons_vio' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/synth_1/.Xil/Vivado-662086-lorsi-ThinkPad-T490/realtime/buttons_vio_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'ila_0' declared at '/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/synth_1/.Xil/Vivado-748984-lorsi-ThinkPad-T490/realtime/ila_0_stub.vhdl:5' bound to instance 'sine_ila' of component 'ila_0' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'ila_0' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/synth_1/.Xil/Vivado-748984-lorsi-ThinkPad-T490/realtime/ila_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'buttons_vio' declared at '/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/synth_1/.Xil/Vivado-748984-lorsi-ThinkPad-T490/realtime/buttons_vio_stub.vhdl:5' bound to instance 'vio_buttons' of component 'buttons_vio' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'buttons_vio' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/synth_1/.Xil/Vivado-748984-lorsi-ThinkPad-T490/realtime/buttons_vio_stub.vhdl:15]
 	Parameter N bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'button_counter' declared at '/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/imports/components/button_counter.vhd:6' bound to instance 'buttons_counter' of component 'button_counter' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:83]
+INFO: [Synth 8-3491] module 'button_counter' declared at '/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/imports/components/button_counter.vhd:6' bound to instance 'buttons_counter' of component 'button_counter' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:98]
 INFO: [Synth 8-638] synthesizing module 'button_counter' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/imports/components/button_counter.vhd:19]
 	Parameter N bound to: 5 - type: integer 
 	Parameter N_BITS bound to: 3 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'button_counter' (1#1) [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/imports/components/button_counter.vhd:19]
-INFO: [Synth 8-3491] module 'generic_counter' declared at '/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/generic_counter.vhd:5' bound to instance 'counter' of component 'generic_counter' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:91]
+INFO: [Synth 8-3491] module 'generic_counter' declared at '/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/generic_counter.vhd:5' bound to instance 'counter' of component 'generic_counter' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'generic_counter' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/generic_counter.vhd:19]
 	Parameter OUTPUT_WIDTH bound to: 8 - type: integer 
 	Parameter COUNT_OFFSET_WIDTH bound to: 3 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'generic_counter' (2#1) [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/generic_counter.vhd:19]
-INFO: [Synth 8-3491] module 'sine_lut' declared at '/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_lut.vhd:5' bound to instance 'sine' of component 'sine_lut' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:101]
+INFO: [Synth 8-3491] module 'sine_lut' declared at '/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_lut.vhd:5' bound to instance 'sine' of component 'sine_lut' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:116]
 INFO: [Synth 8-638] synthesizing module 'sine_lut' [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_lut.vhd:12]
 INFO: [Synth 8-226] default block is never used [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_lut.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'sine_lut' (3#1) [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/components/sine_lut.vhd:12]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'sine'. This will prevent further optimization [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:101]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'counter'. This will prevent further optimization [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:91]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'buttons_counter'. This will prevent further optimization [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:83]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'sine'. This will prevent further optimization [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:116]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'counter'. This will prevent further optimization [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:106]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'buttons_counter'. This will prevent further optimization [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:98]
 INFO: [Synth 8-256] done synthesizing module 'sinewave_gen_top' (4#1) [/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/src/sine_gen_top.vhd:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1351.262 ; gain = 125.609 ; free physical = 14897 ; free virtual = 21567
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1351.262 ; gain = 125.609 ; free physical = 12368 ; free virtual = 19362
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -56,10 +56,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1351.262 ; gain = 125.609 ; free physical = 14895 ; free virtual = 21565
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1351.262 ; gain = 125.609 ; free physical = 12369 ; free virtual = 19360
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1351.262 ; gain = 125.609 ; free physical = 14895 ; free virtual = 21565
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1351.262 ; gain = 125.609 ; free physical = 12369 ; free virtual = 19360
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -79,16 +79,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1679.363 ; gain = 0.000 ; free physical = 14676 ; free virtual = 21346
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1679.363 ; gain = 0.000 ; free physical = 12146 ; free virtual = 19123
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14745 ; free virtual = 21415
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12231 ; free virtual = 19209
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14745 ; free virtual = 21415
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12231 ; free virtual = 19209
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -96,10 +96,10 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for vio_buttons. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for sine_ila. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14744 ; free virtual = 21414
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12232 ; free virtual = 19209
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14736 ; free virtual = 21407
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12223 ; free virtual = 19201
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -159,7 +159,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14710 ; free virtual = 21382
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12218 ; free virtual = 19198
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -185,13 +185,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14585 ; free virtual = 21256
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12080 ; free virtual = 19055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14585 ; free virtual = 21256
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12080 ; free virtual = 19055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -203,7 +203,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14584 ; free virtual = 21256
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12080 ; free virtual = 19055
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -227,7 +227,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14584 ; free virtual = 21256
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12079 ; free virtual = 19054
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -240,7 +240,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14584 ; free virtual = 21256
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12078 ; free virtual = 19053
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -252,25 +252,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14584 ; free virtual = 21256
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12078 ; free virtual = 19053
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14583 ; free virtual = 21255
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12078 ; free virtual = 19052
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14583 ; free virtual = 21255
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12078 ; free virtual = 19052
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14582 ; free virtual = 21254
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12077 ; free virtual = 19052
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -312,11 +312,11 @@ Report Instance Areas:
 |4     |  sine            |sine_lut        |    47|
 +------+------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14582 ; free virtual = 21253
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12078 ; free virtual = 19052
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1679.363 ; gain = 125.609 ; free physical = 14640 ; free virtual = 21312
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 14640 ; free virtual = 21312
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1679.363 ; gain = 125.609 ; free physical = 12135 ; free virtual = 19110
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1679.363 ; gain = 453.711 ; free physical = 12135 ; free virtual = 19110
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -328,8 +328,10 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 31 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:40 . Memory (MB): peak = 1679.363 ; gain = 469.719 ; free physical = 14634 ; free virtual = 21306
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:43 . Memory (MB): peak = 1679.363 ; gain = 469.719 ; free physical = 12128 ; free virtual = 19103
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint '/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/synth_1/sinewave_gen_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file sinewave_gen_top_utilization_synth.rpt -pb sinewave_gen_top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1703.375 ; gain = 0.000 ; free physical = 14635 ; free virtual = 21307
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 10 18:15:20 2021...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1703.375 ; gain = 0.000 ; free physical = 12130 ; free virtual = 19105
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 10 19:03:53 2021...

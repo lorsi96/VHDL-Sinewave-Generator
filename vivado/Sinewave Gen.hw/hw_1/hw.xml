@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7z010_1_1" gui_info="dashboard1=hw_vios[xc7z010_1_1/hw_vio_1=VIO_PROBES_1;]"/>
+  <device name="xc7z010_1" gui_info="dashboard1=hw_vios[xc7z010_1/hw_vio_1=VIO_PROBES_1;],dashboard2=hw_ila_1[xc7z010_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z010_1/hw_ila_1/Status=ILA_STATUS_1;xc7z010_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z010_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z010_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z010_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/sinewave_gen_top.ltx"/>
@@ -29,7 +29,7 @@
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CONTROL.TRIGGER_POSITION" value="512"/>
       <Properties Property="CONTROL.WINDOW_COUNT" value="1"/>
-      <Properties Property="CORE_REFRESH_RATE_MS" value="200"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="2000"/>
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">

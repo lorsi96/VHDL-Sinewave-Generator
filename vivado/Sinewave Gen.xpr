@@ -83,9 +83,11 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../src/components/sin_clk_gen.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/components/clk_gen.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../src/components/clk_gen.vhd"/>
+          <Attr Name="ImportTime" Val="1633901442"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
