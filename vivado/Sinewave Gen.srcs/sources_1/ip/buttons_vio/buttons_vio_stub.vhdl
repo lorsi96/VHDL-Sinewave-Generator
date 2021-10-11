@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Sun Oct 10 18:03:07 2021
+-- Date        : Mon Oct 11 00:04:52 2021
 -- Host        : lorsi-ThinkPad-T490 running 64-bit Ubuntu 20.04.2 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               {/home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave
@@ -16,7 +16,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity buttons_vio is
   Port ( 
     clk : in STD_LOGIC;
-    probe_in0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
     probe_out0 : out STD_LOGIC_VECTOR ( 0 to 0 );
     probe_out1 : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
@@ -27,7 +26,7 @@ architecture stub of buttons_vio is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,probe_in0[2:0],probe_out0[0:0],probe_out1[0:0]";
+attribute black_box_pad_pin of stub : architecture is "clk,probe_out0[0:0],probe_out1[0:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "vio,Vivado 2018.1";
 begin

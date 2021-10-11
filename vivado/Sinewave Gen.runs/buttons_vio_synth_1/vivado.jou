@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Sun Oct 10 18:02:17 2021
-# Process ID: 660507
+# Start of session at: Mon Oct 11 00:03:58 2021
+# Process ID: 803924
 # Current directory: /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/buttons_vio_synth_1
 # Command line: vivado -log buttons_vio.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source buttons_vio.tcl
 # Log file: /home/lorsi/Documents/CESE/CLP/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/buttons_vio_synth_1/buttons_vio.vds

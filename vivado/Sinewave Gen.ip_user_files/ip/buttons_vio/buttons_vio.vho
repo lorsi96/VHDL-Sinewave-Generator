@@ -55,7 +55,6 @@
 COMPONENT buttons_vio
   PORT (
     clk : IN STD_LOGIC;
-    probe_in0 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     probe_out0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe_out1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
   );
@@ -69,7 +68,6 @@ END COMPONENT;
 your_instance_name : buttons_vio
   PORT MAP (
     clk => clk,
-    probe_in0 => probe_in0,
     probe_out0 => probe_out0,
     probe_out1 => probe_out1
   );

@@ -54,8 +54,7 @@ PORT (
 
 
 
-	probe0 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-	probe1 : IN STD_LOGIC_VECTOR(7 DOWNTO 0)
+	probe0 : IN STD_LOGIC_VECTOR(7 DOWNTO 0)
 );
 END COMPONENT  ;
 
@@ -73,8 +72,7 @@ PORT MAP (
 
 
 
-	probe0 => probe0,
-	probe1 => probe1
+	probe0 => probe0
 );
 
 

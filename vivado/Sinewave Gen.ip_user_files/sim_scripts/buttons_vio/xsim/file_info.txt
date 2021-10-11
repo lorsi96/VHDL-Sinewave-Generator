@@ -1,1 +1,2 @@
 buttons_vio.vhd,vhdl,xil_defaultlib,../../../../Sinewave Gen.srcs/sources_1/ip/buttons_vio/sim/buttons_vio.vhd,incdir="../../../../SinewaveGen.srcs/sources_1/ip/buttons_vio/hdl/verilog"incdir="../../../../SinewaveGen.srcs/sources_1/ip/buttons_vio/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

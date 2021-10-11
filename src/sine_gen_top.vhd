@@ -10,14 +10,14 @@ entity sinewave_gen_top is
 end;
 
 architecture sinewave_gen_top_arch of sinewave_gen_top is
-    component generic_counter is
-         port (
-            cout   :out std_logic_vector (7 downto 0); 
-            enable :in  std_logic;                     
-            clk    :in  std_logic;                     
-            offset :in  std_logic_vector(2 downto 0);
-            reset  :in  std_logic                      
-         );
+  
+    component sine_gen is
+        port(
+            clk: in std_logic;
+            btn_up: in std_logic;
+            btn_down: in std_logic;
+            sin_out: out std_logic_vector(7 downto 0)
+        );
     end component;
 
     --component clk_gen is
@@ -33,24 +33,7 @@ architecture sinewave_gen_top_arch of sinewave_gen_top is
     --    );
     --end component;
     
-    component sine_lut is
-        port(
-            address_in: in std_logic_vector(7 downto 0);
-            data_out: out std_logic_vector(7 downto 0)
-        );
-    end component sine_lut;
-    
-    component button_counter is
-        generic(
-            N: natural := 5
-        );
-        port( 
-            clk:    in std_logic;
-            up:     in STD_LOGIC;
-            down:   in STD_LOGIC;
-            cnt:    out STD_LOGIC_VECTOR (2 downto 0)
-        );
-    end component button_counter;
+
         
     --- Debugging Components ---
     COMPONENT buttons_vio
@@ -72,9 +55,7 @@ architecture sinewave_gen_top_arch of sinewave_gen_top is
    
     -- Signals --
     signal dwnsmpl_clk: std_logic;
-    signal cnt_out_addr_in: std_logic_vector(7 downto 0);
     signal data_out_probe_in: std_logic_vector(7 downto 0);
-    signal btn_out_mul_in: std_logic_vector(2 downto 0);
     signal up_vio: std_logic_vector(0 downto 0);
     signal down_vio: std_logic_vector(0 downto 0);
    
@@ -95,29 +76,13 @@ begin
         probe_out1 => down_vio
       );
     
-    buttons_counter: button_counter
-    port map (
-        clk => dwnsmpl_clk,
-        up => up_vio(0),
-        down => down_vio(0),
-        cnt => btn_out_mul_in    
-    );
-    
-    counter: generic_counter
-    port map (
-        clk => dwnsmpl_clk,
-        enable => '1',
-        reset => '0',
-        offset => btn_out_mul_in,
-        cout => cnt_out_addr_in    
-    );
-
-
-    sine : sine_lut
-    port map(
-        address_in => cnt_out_addr_in,
-        data_out => data_out_probe_in
-    );
+    sine_gen_inst : sine_gen
+      port map(
+          clk => dwnsmpl_clk,
+          btn_up => up_vio,
+          btn_down => down_vio,
+          sin_out, data_out_probe_in
+      );
     
     dwnsmpl_clk <= clk;
     --clk_gen_inst: clk_gen

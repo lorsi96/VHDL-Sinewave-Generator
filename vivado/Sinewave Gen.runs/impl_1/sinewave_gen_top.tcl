@@ -60,8 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL 9-1061} -limit 100000
-set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
@@ -69,9 +67,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-660064-lorsi-ThinkPad-T490/incrSyn
-  set_param xicom.use_bs_reader 1
-  set_param tcl.collectionResultDisplayLimit 0
+  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-774072-lorsi-ThinkPad-T490/incrSyn
   create_project -in_memory -part xc7z010clg400-1
   set_property board_part digilentinc.com:arty-z7-10:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
