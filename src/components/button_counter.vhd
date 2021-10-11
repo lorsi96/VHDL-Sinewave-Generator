@@ -23,16 +23,16 @@ architecture button_counter_arch of button_counter is
 begin
     process(clk)
     begin
-    if rising_edge(clk) then
-        if up = '1' and last_up = '0' and internal_counter < N then
-            internal_counter <= internal_counter + 1;
-        end if;
-        if down = '1' and last_down = '0' and internal_counter > 0 then
-            internal_counter <= internal_counter - 1;
-        end if;
-        last_up <= up;
-        last_down <= down;
-    end if; 
+        if rising_edge(clk) then
+            if up = '1' and last_up = '0' and internal_counter < N then
+                internal_counter <= internal_counter + 1;
+            end if;
+            if down = '1' and last_down = '0' and internal_counter > 0 then
+                internal_counter <= internal_counter - 1;
+            end if;
+            last_up <= up;
+            last_down <= down;
+        end if; 
     end process;
     cnt <= std_logic_vector(internal_counter);
 end button_counter_arch;

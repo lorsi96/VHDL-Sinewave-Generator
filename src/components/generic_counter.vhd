@@ -19,7 +19,8 @@ use IEEE.numeric_std.all;
  architecture rtl of generic_counter is
      signal count: unsigned(OUTPUT_WIDTH - 1 downto 0) := (others => '0');
  begin
-     process (clk, reset) begin
+     process (clk, reset) 
+     begin
          if (reset = '1') then
              count <= (others=>'0');
         elsif (rising_edge(clk)) then

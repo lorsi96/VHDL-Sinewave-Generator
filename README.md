@@ -25,8 +25,8 @@ El bloque principal se descompone en tres sub-bloques:
 ## Características de Señal de Salida
 Para este trabajo se ha elegido que la señal de salida cuente con 256 niveles (8 bits) y tenga 1024 muestras. 
 
-- La cantidad de niveles fue elegida para que la señal sea apta para ser empleada a la entrada de un DAC de 8 bits. 
-- La cantidad de muestras fue elegida en base a la cantidad máxima de muestras que puede tomar el _ILA_. De esta forma resulta sencillo evaluar el correcto funcionamiento del programa, ya que al analizar la señal de salida con el analizador lógico integrado, se visualiza exactamente un ciclo completo (o multiplos del mismo) de señal senoidal.
+- La cantidad de niveles fue elegida para se compatible con un DAC de 8 bits. 
+- La cantidad de muestras fue elegida en base a la cantidad máxima de muestras que puede tomar el _ILA_. De esta forma resulta sencillo evaluar el correcto funcionamiento del programa ya que, al analizar la señal de salida con el analizador lógico integrado, se visualiza exactamente un ciclo completo (o multiplos del mismo) de señal senoidal.
 
 Se muestra a continuación una captura del ILA en Vivado utilizando el hardware remoto.
 
