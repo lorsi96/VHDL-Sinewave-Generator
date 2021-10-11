@@ -47,11 +47,10 @@ Prueba en FPGA del módulo contador módulo N utilizado para controlar la entrad
 ![MainCounterIla](./doc/images/MainCounterILA.png)
 
 ### Botones + Contador de control de frecuencia
-Prueba del contador up/down con saturación, utilizando las señales de botones para corroborar su funcionamiento (incremento, decremento y saturacióñ).
+Prueba del contador up/down con saturación, utilizando las señales de botones para corroborar su funcionamiento (incremento, decremento y saturación).
 ![CountButton](./doc/images/ButtonCountSim.png)
 
 ## Tabla de uso de recursos
-
 ![Utilización](./doc/images/Utilización.png)
 
 
@@ -72,5 +71,5 @@ Prueba del contador up/down con saturación, utilizando las señales de botones 
 +----------------------------+------+-------+-----------+-------+
 ```
 
-## Presentación y Simulaciones
+## Presentación
 Ver [Slides](./doc/Slides.pdf)
