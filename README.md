@@ -37,5 +37,40 @@ Se muestran 4 senoidales de distintas frecuencias generadas por el programa. En 
 
 ![Capturepython](./doc/images/Sinewaves.png)
 
+## Simulaciones Relevantes
+### Bloque Principal: Sin Gen
+Prueba de generación de señal senoidal con el bloque principal. En esta prueba se utilizaron las señales de control ("botones") para verificar el cambio de frecuencia en la señal de salida.
+![SimGen](./doc/images/SinGen.png)
+
+### Contador Módulo N
+Prueba en FPGA del módulo contador módulo N utilizado para controlar la entrada de la tabla de senoidales. En esta prueba se utilizó en modo _Módulo 8_, si bien para la aplicación final se ha utilizado en _Módulo 10_. 
+![MainCounterIla](./doc/images/MainCounterILA.png)
+
+### Botones + Contador de control de frecuencia
+Prueba del contador up/down con saturación, utilizando las señales de botones para corroborar su funcionamiento (incremento, decremento y saturacióñ).
+![CountButton](./doc/images/ButtonCountSim.png)
+
+## Tabla de uso de recursos
+
+![Utilización](./doc/images/Utilización.png)
+
+
+```
++----------------------------+------+-------+-----------+-------+
+|          Site Type         | Used | Fixed | Available | Util% |
++----------------------------+------+-------+-----------+-------+
+| Slice LUTs                 | 1367 |     0 |     17600 |  7.77 |
+|   LUT as Logic             | 1270 |     0 |     17600 |  7.22 |
+|   LUT as Memory            |   97 |     0 |      6000 |  1.62 |
+|     LUT as Distributed RAM |   24 |     0 |           |       |
+|     LUT as Shift Register  |   73 |     0 |           |       |
+| Slice Registers            | 2149 |     0 |     35200 |  6.11 |
+|   Register as Flip Flop    | 2149 |     0 |     35200 |  6.11 |
+|   Register as Latch        |    0 |     0 |     35200 |  0.00 |
+| F7 Muxes                   |   47 |     0 |      8800 |  0.53 |
+| F8 Muxes                   |   19 |     0 |      4400 |  0.43 |
++----------------------------+------+-------+-----------+-------+
+```
+
 ## Presentación y Simulaciones
 Ver [Slides](./doc/Slides.pdf)
