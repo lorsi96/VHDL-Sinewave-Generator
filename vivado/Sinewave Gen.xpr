@@ -128,8 +128,37 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../src/testbenchs/generic_counter_tb.vhd">
+      <File Path="$PSRCDIR/sim_1/imports/testbenches/generic_counter_tb.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../src/testbenches/generic_counter_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1633904907"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/testbenches/button_counter_tb.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../src/testbenches/button_counter_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1633903525"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/testbenches/sine_lut_tb.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../src/testbenches/sine_lut_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1633920126"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/testbenches/sine_gen_tb.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../src/testbenches/sine_gen_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1633971656"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
