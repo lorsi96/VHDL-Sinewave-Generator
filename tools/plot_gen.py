@@ -2,14 +2,14 @@ import os
 import matplotlib.pyplot as plt
 
 def csv_2_list(filename):
-    with open(os.path.join('signal_captures', filename)) as f:
+    with open(os.path.join('reports/signal_captures', filename)) as f:
         for l in f.readlines()[1:]:
-            yield int(l.split(',')[3], base=16)s
+            yield int(l.split(',')[3], base=16)
 
 csvs = list()
   
 # Iterate for each dict object in os.walk()
-for root, dirs, files in os.walk("signal_captures"):
+for root, dirs, files in os.walk("reports/signal_captures"):
     csvs.extend(files)
 sigs = [] 
 for sine in csvs:
