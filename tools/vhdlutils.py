@@ -32,10 +32,10 @@ def get_command(dut, inc_sim=True, stop_time=STOP_TIME):
 
 run =  os.system
 
-parser = argparse.ArgumentParser(description='Create a simple VHDL module.')
+parser = argparse.ArgumentParser(description='Compile and simulate VHDL sources.')
 parser.add_argument('component', type=str, help='Component whose testbench will be simulated')
-parser.add_argument('--time', type=int, default=STOP_TIME, help='Simulation stoptime in nanoseconds')
-parser.add_argument('--compile-only', default=False, help='Does not any simulation', action='store_true')
+parser.add_argument('--time', type=int, default=STOP_TIME, help='dimulation stoptime in nanoseconds')
+parser.add_argument('--compile-only', default=False, help='does not run any simulation', action='store_true')
 
 
 if __name__ == '__main__':

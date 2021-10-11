@@ -39,7 +39,6 @@ architecture sinewave_gen_top_arch of sinewave_gen_top is
     COMPONENT buttons_vio
       PORT (
         clk : IN STD_LOGIC;
-        probe_in0 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
         probe_out0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
         probe_out1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
       );
@@ -48,8 +47,7 @@ architecture sinewave_gen_top_arch of sinewave_gen_top is
     COMPONENT ila_0
     PORT (
         clk : IN STD_LOGIC;
-        probe0 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-        probe1 : IN STD_LOGIC_VECTOR(7 DOWNTO 0)
+        probe0 : IN STD_LOGIC_VECTOR(7 DOWNTO 0)
     );
     END COMPONENT;
    
@@ -64,14 +62,12 @@ begin
     sine_ila : ila_0
     PORT MAP (
         clk => dwnsmpl_clk,
-        probe0 => data_out_probe_in,
-        probe1 => cnt_out_addr_in
+        probe0 => data_out_probe_in
     );
     
     vio_buttons : buttons_vio
       PORT MAP (
         clk => clk,
-        probe_in0 => btn_out_mul_in,
         probe_out0 => up_vio,
         probe_out1 => down_vio
       );
@@ -79,9 +75,9 @@ begin
     sine_gen_inst : sine_gen
       port map(
           clk => dwnsmpl_clk,
-          btn_up => up_vio,
-          btn_down => down_vio,
-          sin_out, data_out_probe_in
+          btn_up => up_vio(0),
+          btn_down => down_vio(0),
+          sin_out => data_out_probe_in
       );
     
     dwnsmpl_clk <= clk;

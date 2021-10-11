@@ -35,12 +35,22 @@ begin
 
     TEST: process
     begin
-        wait for 1.5 us;
+        wait for 10 us;
         btn_up_tb <= '0';
         wait for 100 ns;
         btn_up_tb <= '1';
         wait for 100 ns;
         btn_up_tb <= '0';
+        wait for 15 us;
+        btn_down_tb <= '1';
+        wait for 100 ns;
+        btn_down_tb <= '0';
+        wait for 100 ns;
+        btn_down_tb <= '1';
+        wait for 100 ns;
+        btn_down_tb <= '0';
+        
+        
         wait;
     end process;
 end;
