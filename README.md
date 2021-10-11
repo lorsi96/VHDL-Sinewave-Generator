@@ -36,3 +36,6 @@ Se muestra a continuación una captura del ILA en Vivado utilizando el hardware 
 Se muestran 4 senoidales de distintas frecuencias generadas por el programa. En ``x6`` ya se puede apreciar la degradación de la señal, producto del _salteo de muestras_.
 
 ![Capturepython](./doc/images/Sinewaves.png)
+
+## Presentación y Simulaciones
+Ver [Slides](./doc/Slides.pdf)
